@@ -9,6 +9,7 @@ const verifyToken = require('./routes/validacion-token')
 const conexionDB = require('./conexionDB')
 
 conexionDB()
+
 const serviciosRouter = require('./routes/servicios')
 const usuariosRouter = require('./routes/users')
 const promocionesRouter = require('./routes/promociones')

@@ -8,6 +8,7 @@ const {
   editarPromocion,
   eliminarPromocion,
 } = require('./controllers/promocionesCrud.js')
+
 /* rutas de promociones. */
 router
   .get('/', getPromociones)

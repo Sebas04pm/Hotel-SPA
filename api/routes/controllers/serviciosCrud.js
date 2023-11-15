@@ -1,4 +1,5 @@
 const Servicios = require('../../models/servicios')
+
 //funcion para obtener todos los servicios
 const getServicios = async (req, res) => {
   try {
@@ -28,6 +29,7 @@ const crearServicio = async (req, res) => {
     return
   }
 }
+
 //funcion para editar un servicio
 const editarServicio = async (req, res) => {
   try {
@@ -43,6 +45,7 @@ const editarServicio = async (req, res) => {
     return
   }
 }
+
 //funcion para eliminar un servicio
 const eliminarServicio = async (req, res) => {
   try {
@@ -58,6 +61,7 @@ const eliminarServicio = async (req, res) => {
     return
   }
 }
+
 module.exports = {
   getServicios,
   crearServicio,
