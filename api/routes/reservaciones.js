@@ -1,17 +1,18 @@
 const express = require('express')
 const router = express.Router()
+const verifyToken = require('./validacion-token')
+
 const {
   getReservaciones,
   crearReservacion,
   editarReservacion,
   eliminarReservacion,
-} = require('../controllers/reservacionesCrud.js')
-
-/* rutas de promociones. */
+} = require('./controllers/reservacionesCrud.js')
+/* rutas de reservaciones. */
 router
   .get('/', getReservaciones)
-  .post('/nuevo', crearReservacion)
-  .put('/editar/:id', editarReservacion)
-  .delete('/eliminar/:id', eliminarReservacion)
+  .post('/nuevo', verifyToken, crearReservacion)
+  .put('/editar/:id', verifyToken, editarReservacion)
+  .delete('/eliminar/:id', verifyToken, eliminarReservacion)
 
 module.exports = router
