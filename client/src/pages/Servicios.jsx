@@ -24,6 +24,27 @@ const Servicios = () => {
             En un paraíso tropical, con piscinas de ensueño, sol radiante todo el año, con las mejores actividades para toda la familia. Podrás disfrutar unas vacaciones inolvidables, con niños o en pareja, de relax o para practicar tu deporte favorito. 
             </p>
           </header>
+          
+          <form className="font-secondary flex flex-shrink w-full px-2 max-w-lg mx-auto justify-center" onSubmit={handleSubmit}>
+        <input
+          className="border border-r-0 border-palette-light rounded-l-lg w-2/3
+                focus:outline-none focus:ring-1 focus:ring-palette-primary"
+          type="text"
+          required
+          placeholder="Buscar..."
+        />
+         <button
+        type="submit"
+        className={classNames(
+          clicked ? 'pointer-events-none	opacity-75' : '',
+          `py-3 px-4 bg-backTurquesa hover:bg-backOscuro text-white text-sm sm:text-base font-semibold rounded-r-lg border border-transparent 
+          focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-palette-primary`
+        )}
+      >
+        Buscar
+      </button>
+      </form>
+      
           <div
             id='lista de servicios'
             className='w-full min-h-[45vh] sm:min-h-screen lg:min-h-[140vh] bg-servicios-Img bg-no-repeat bg-cover bg-center flex flex-wrap gap-10 p-20 justify-center items-center'

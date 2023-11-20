@@ -9,6 +9,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 const CardServicios = ({ servicio }) => {
   return (
+    
     <Card className='w-[200px] bg-letrasHead'>
       <CardBody>
         <Typography variant='h5' color='blue-gray' className='mb-2 text-center'>
@@ -20,6 +21,9 @@ const CardServicios = ({ servicio }) => {
           </p>
           <p className='text-[18px]'>
             <span className='font-bold'>Duracion:</span> {servicio.duracion}{' '}
+          </p>
+          <p className='text-[18px]'>
+            <span className='font-bold'>Descripción:</span> {servicio.descripcion}{' '}
           </p>
         </div>
       </CardBody>
